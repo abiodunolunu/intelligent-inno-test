@@ -64,3 +64,10 @@ a.brand {
     height: 36px;
   }
 }
+
+.profile {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

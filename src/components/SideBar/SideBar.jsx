@@ -2,6 +2,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import { useGlobalContext } from "../../context/GlobalContext";
+import Profile from "../Profile/Profile";
 import styles, { brand } from "./SiderBar.module.scss";
 const SideBar = () => {
   const { showSideBar } = useGlobalContext();
@@ -10,6 +11,10 @@ const SideBar = () => {
       <a href="#" className={brand}>
         <img src={logo} alt="" />
       </a>
+
+      <div className={styles["profile"]}>
+        <Profile />
+      </div>
 
       <ul className={styles["list"]} style={{ marginTop: "2rem" }}>
         <li>
