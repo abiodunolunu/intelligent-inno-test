@@ -1,0 +1,6 @@
+.person-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // justify-content: center;
+  gap: 2rem 1rem;
+}

@@ -1,0 +1,120 @@
+.person-card {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 240px;
+  // width: 180px;
+  position: relative;
+  transition: 320ms linear;
+  transform-origin: top;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px -5px var(--pry-clr);
+    .info-action {
+      background: #fff;
+
+      p {
+        color: var(--pry-clr);
+
+        &:last-of-type {
+          color: #333;
+        }
+      }
+    }
+
+    .actions {
+      transform: translateY(0px);
+      margin-top: 0.5rem;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.tabs {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  right: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  span {
+    display: block;
+    height: 3px;
+    width: 25%;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 2px;
+    background-color: rgba(204, 204, 204, 0.5);
+
+    &:hover,
+    &.active,
+    &:first-of-type {
+      background-color: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+    }
+  }
+}
+
+.info-action {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, black);
+  // background: linear-gradient(to bottom, blue 25px 45px, red 5px);
+
+  font-size: 14px;
+  color: #fff;
+
+  p {
+    &:first-of-type {
+      font-weight: 700;
+    }
+
+    &:last-of-type {
+      margin-top: 4px;
+      font-size: 11px;
+
+      i {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+
+  .actions {
+    transition: 320ms linear;
+    transform-origin: top;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.4rem;
+
+    transform: translateY(10px);
+    margin-top: -1rem;
+    opacity: 0;
+    pointer-events: none;
+
+    button {
+      border: none;
+      outline: none;
+      padding: 0.2rem;
+      color: #fff;
+      cursor: pointer;
+      &.like-btn {
+        background-color: #950909;
+      }
+
+      &.dislike-btn {
+        background-color: #09065a;
+      }
+    }
+  }
+}

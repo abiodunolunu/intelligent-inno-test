@@ -1,0 +1,41 @@
+.profile {
+  display: flex;
+
+  align-items: center;
+  align-content: center;
+  font-size: 14px;
+}
+
+.profile-img {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  //   overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    bottom: 0;
+    right: 0px;
+    border-radius: 50%;
+    background-color: #52d453;
+  }
+}
+
+.drop-down {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+
+  i {
+    margin-left: 4px;
+  }
+}
