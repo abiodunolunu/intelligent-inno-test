@@ -42,13 +42,6 @@
   border-radius: 8px;
   box-shadow: 0px 0px 20px -5px var(--pry-clr-light);
 
-  @media (max-width: 768px) {
-    right: 0%;
-    // left: -50%;
-    left: initial;
-    transform: translateX(0%);
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -62,6 +55,17 @@
     border-bottom: 16px solid #fff;
     left: 116px;
     // transform: translate(50%);
+  }
+
+  @media (max-width: 768px) {
+    right: 0%;
+    left: initial;
+    transform: translateX(0%);
+
+    &::after {
+      left: initial;
+      right: 4px;
+    }
   }
 }
 
