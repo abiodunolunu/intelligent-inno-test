@@ -1,12 +1,15 @@
 import faker from "faker";
-import React, { useEffect } from "react";
+import React from "react";
+import { useImages } from "../../context/ImageContext";
 import style from "./PersonCard.module.scss";
 
 const PersonCard = ({ image, alt }) => {
-  useEffect(() => {}, [image]);
+  // useEffect(() => {}, [image]);
+
+  const { images } = useImages();
 
   return (
-    <div className={style["person-card"]}>
+    <div className={style["person-card"]} style={{ maxWidth: `${images.length < 2 ? "250px" : "100%"}` }}>
       <div className={style["tabs"]}>
         <span></span>
         <span></span>
